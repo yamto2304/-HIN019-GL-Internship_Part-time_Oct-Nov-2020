@@ -1,0 +1,6 @@
+﻿  HandlingDoor.cpp
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\handlingdoor\handlingdoor\handlingdoor.cpp(67): warning C4715: 'Closed::GetNextState': not all control paths return a value
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\handlingdoor\handlingdoor\handlingdoor.cpp(88): warning C4715: 'Opened::GetNextState': not all control paths return a value
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\handlingdoor\handlingdoor\handlingdoor.cpp(79): warning C4715: 'Locked::GetNextState': not all control paths return a value
+  HandlingDoor.vcxproj -> c:\users\tuani\onedrive\documents\visual studio 2015\Projects\HandlingDoor\Debug\HandlingDoor.exe
+  HandlingDoor.vcxproj -> c:\users\tuani\onedrive\documents\visual studio 2015\Projects\HandlingDoor\Debug\HandlingDoor.pdb (Full PDB)
