@@ -8,6 +8,7 @@
 #include "Sprite2D.h"
 #include "Sprite3D.h"
 #include "Text.h"
+#include "SpriteAnimation.h"
 
 extern int screenWidth; //need get on Graphic engine
 extern int screenHeight; //need get on Graphic engine
@@ -40,6 +41,14 @@ void GSPlay::Init()
 	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("arialbd");
 	m_score = std::make_shared< Text>(shader, font, "score: 10", TEXT_COLOR::RED, 1.0);
 	m_score->Set2DPosition(Vector2(5, 25));
+
+	// Animation
+	shader = ResourceManagers::GetInstance()->GetShader("Animation");
+	texture = ResourceManagers::GetInstance()->GetTexture("coin1");
+	std::shared_ptr<SpriteAnimation> obj = std::make_shared<SpriteAnimation>(model, shader, texture, 6, 0.1f);
+	obj->Set2DPosition(240, 400);
+	obj->SetSize(52, 52);
+	m_listSpriteAnimations.push_back(obj);
 }
 
 void GSPlay::Exit()
@@ -75,11 +84,19 @@ void GSPlay::HandleTouchEvents(int x, int y, bool bIsPressed)
 
 void GSPlay::Update(float deltaTime)
 {
+	for (auto obj : m_listSpriteAnimations)
+	{
+		obj->Update(deltaTime);
+	}
 }
 
 void GSPlay::Draw()
 {
 	m_BackGround->Draw();
+	for (auto obj : m_listSpriteAnimations)
+	{
+		obj->Draw();
+	}
 	m_score->Draw();
 }
 
