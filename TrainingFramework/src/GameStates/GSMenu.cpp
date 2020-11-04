@@ -13,8 +13,6 @@ GSMenu::~GSMenu()
 {
 }
 
-
-
 void GSMenu::Init()
 {
 	auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D");
@@ -36,16 +34,6 @@ void GSMenu::Init()
 		});
 	m_listButton.push_back(button);
 
-	//another button
-	texture = ResourceManagers::GetInstance()->GetTexture("button_play");
-	//std::shared_ptr<GameButton> button = std::make_shared<GameButton>(model, shader, texture);
-	button->Set2DPosition(screenWidth / 2, 400);
-	button = std::make_shared<GameButton>(model, shader, texture);
-	button->Set2DPosition(screenWidth / 2, 500);
-	button->SetSize(100, 50);
-	button->SetOnClick([]() {});
-	m_listButton.push_back(button);
-
 	//exit button
 	texture = ResourceManagers::GetInstance()->GetTexture("button_quit");
 	button = std::make_shared<GameButton>(model, shader, texture);
@@ -56,12 +44,34 @@ void GSMenu::Init()
 		});
 	m_listButton.push_back(button);
 
+	//setting button
+	texture = ResourceManagers::GetInstance()->GetTexture("button_setting");
+	button = std::make_shared<GameButton>(model, shader, texture);
+	button->Set2DPosition(screenWidth / 2, 400);
+	button->SetSize(200, 50);
+	button->SetOnClick([]() {
+		GameStateMachine::GetInstance()->ChangeState(StateTypes::STATE_Setting);
+	});
+	m_listButton.push_back(button);
 
-	//text game title
+	//credit button
+	//need a new file .tga of button
+	texture = ResourceManagers::GetInstance()->GetTexture("button_setting");
+	button = std::make_shared<GameButton>(model, shader, texture);
+	button->Set2DPosition(screenWidth / 2, 500);
+	button->SetSize(200, 50);
+	button->SetOnClick([]() {
+		GameStateMachine::GetInstance()->ChangeState(StateTypes::STATE_Credit);
+	});
+	m_listButton.push_back(button);
+
+
+	//State game title
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
 	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("arialbd");
-	m_Text_gameName = std::make_shared< Text>(shader, font, "Sample Title", TEXT_COLOR::GREEN, 1.0);
+	m_Text_gameName = std::make_shared< Text>(shader, font, "Menu State", TEXT_COLOR::GREEN, 1.0);
 	m_Text_gameName->Set2DPosition(Vector2(screenWidth / 2 - 80, 120));
+
 }
 
 void GSMenu::Exit()
