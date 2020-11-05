@@ -91,6 +91,11 @@
 #define KEY_MOVE_FORWORD		87	// key w
 #define KEY_MOVE_BACKWORD		83	// key s
 
+#define MOVE_LEFT				200
+#define MOVE_RIGHT				201
+#define MOVE_DOWN				202
+#define MOVE_UP					203
+
 #elif ANDROID
 
 #define KEY_BACK				27	// key Esc
