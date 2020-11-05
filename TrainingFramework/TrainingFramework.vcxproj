@@ -260,6 +260,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\GameObject\Player.cpp" />
     <ClCompile Include="src\GameStates\GSSetting.cpp" />
     <ClCompile Include="src\GameStates\GSCredit.cpp" />
     <ClCompile Include="src\Application.cpp" />
@@ -284,6 +285,7 @@
     <ClCompile Include="src\TrainingFramework.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\GameObject\Player.h" />
     <ClInclude Include="src\GameStates\GSSetting.h" />
     <ClInclude Include="src\GameStates\GSCredit.h" />
     <ClInclude Include="src\Application.h" />
