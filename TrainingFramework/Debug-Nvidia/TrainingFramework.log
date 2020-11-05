@@ -1,26 +1,9 @@
-﻿  GSMenu.cpp
-c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsmenu.cpp(24): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsmenu.cpp(30): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsmenu.cpp(40): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsmenu.cpp(50): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsmenu.cpp(61): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsmenu.cpp(73): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(901): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[11],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[11],TEXT_COLOR &&,double &&)' being compiled
-          with
-          [
-              _Ty=Text
-          ]
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[11],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[11],TEXT_COLOR &&,double &&)' being compiled
-          with
-          [
-              _Ty=Text
-          ]
-  c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsmenu.cpp(72): note: see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[11],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[11],TEXT_COLOR &&,double &&)' being compiled
-  GSCredit.cpp
-c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gscredit.cpp(23): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gscredit.cpp(29): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
-c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gscredit.cpp(40): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+﻿  GSPlay.cpp
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(39): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(44): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(51): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(154): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(156): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
 c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(901): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[13],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[13],TEXT_COLOR &&,double &&)' being compiled
           with
@@ -32,7 +15,6 @@ c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(901): warn
           [
               _Ty=Text
           ]
-  c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gscredit.cpp(39): note: see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[13],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[13],TEXT_COLOR &&,double &&)' being compiled
-  Generating Code...
+  c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(62): note: see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[13],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[13],TEXT_COLOR &&,double &&)' being compiled
   TrainingFramework.vcxproj -> C:\Users\Tuani\OneDrive\Documents\Visual Studio 2015\Projects\-HIN019-Gameloft-Internship_Part-time_Oct-Nov-2020\\BIN-Nvidia\TrainingFramework.exe
   TrainingFramework.vcxproj -> C:\Users\Tuani\OneDrive\Documents\Visual Studio 2015\Projects\-HIN019-Gameloft-Internship_Part-time_Oct-Nov-2020\\BIN-Nvidia\TrainingFramework.pdb (Full PDB)

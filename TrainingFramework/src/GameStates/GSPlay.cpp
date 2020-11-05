@@ -11,7 +11,7 @@
 #include "SpriteAnimation.h"
 #include "GameButton.h"
 
-#define BACKGROUND_SPEED 500
+#define BACKGROUND_SPEED 100
 
 extern int screenWidth; //need get on Graphic engine   ||480
 extern int screenHeight; //need get on Graphic engine  ||800
@@ -30,7 +30,7 @@ GSPlay::~GSPlay()
 void GSPlay::Init()
 {
 	auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D");
-	auto texture = ResourceManagers::GetInstance()->GetTexture("bg_play");
+	auto texture = ResourceManagers::GetInstance()->GetTexture("bg_night");
 
 	//BackGround
 	
@@ -64,10 +64,10 @@ void GSPlay::Init()
 
 	// Animation
 	shader = ResourceManagers::GetInstance()->GetShader("Animation");
-	texture = ResourceManagers::GetInstance()->GetTexture("coin1");
-	std::shared_ptr<SpriteAnimation> obj = std::make_shared<SpriteAnimation>(model, shader, texture, 6, 0.1f);
+	texture = ResourceManagers::GetInstance()->GetTexture("shipfinal");
+	std::shared_ptr<SpriteAnimation> obj = std::make_shared<SpriteAnimation>(model, shader, texture, 1, 0.1f);
 	obj->Set2DPosition(240, 400);
-	obj->SetSize(52, 52);
+	obj->SetSize(152, 152);
 	m_listSpriteAnimations.push_back(obj);
 }
 
@@ -94,7 +94,43 @@ void GSPlay::HandleEvents()
 
 void GSPlay::HandleKeyEvents(int key, bool bIsPressed)
 {
-	
+	//if (bIsPressed) {
+	//	Vector2 oldPos = m_BackGround->Get2DPosition();
+	//	if (key == KEY_RIGHT) {
+	//		m_hero->ChangeState(CharacterStateTypes::CHARACTER_STATE_Walk);
+	//		int newPosX = oldPos.x - 8;
+	//		if (MAP_WIDTH / 2 + newPosX < screenWidth) {
+	//			newPosX = screenWidth - MAP_WIDTH / 2;
+	//			/*Vector2 oldHeroPos = m_hero->Get2DPosition();
+	//			m_hero->Set2DPosition(oldHeroPos.x + 16, oldHeroPos.y);*/
+	//		}
+	//		m_BackGround->Set2DPosition(newPosX, oldPos.y);
+	//	}
+	//	else if (key == KEY_LEFT) {
+	//		m_hero->ChangeState(CharacterStateTypes::CHARACTER_STATE_Walk);
+	//		int newPosX = oldPos.x + 8;
+	//		if (MAP_WIDTH / 2 - newPosX < 0)
+	//			newPosX = MAP_WIDTH / 2;
+	//		m_BackGround->Set2DPosition(newPosX, oldPos.y);
+	//	}
+	//	else if (key == KEY_DOWN) {
+	//		m_hero->ChangeState(CharacterStateTypes::CHARACTER_STATE_Walk);
+	//		int newPosY = oldPos.y - 8;
+	//		if (MAP_HEIGHT / 2 + newPosY < screenHeight)
+	//			newPosY = screenHeight - MAP_HEIGHT / 2;
+	//		m_BackGround->Set2DPosition(oldPos.x, newPosY);
+	//	}
+	//	else if (key == KEY_UP) {
+	//		m_hero->ChangeState(CharacterStateTypes::CHARACTER_STATE_Walk);
+	//		int newPosY = oldPos.y + 8;
+	//		if (MAP_HEIGHT / 2 - newPosY < 0)
+	//			newPosY = MAP_HEIGHT / 2;
+	//		m_BackGround->Set2DPosition(oldPos.x, newPosY);
+	//	}
+	//}
+	//else {
+	//	m_hero->ChangeState(CharacterStateTypes::CHARACTER_STATE_Idle);
+	//}
 }
 
 void GSPlay::HandleTouchEvents(int x, int y, bool bIsPressed)
@@ -115,9 +151,9 @@ void GSPlay::Update(float deltaTime)
 	for (auto bg : m_listSprite2D)
 	{
 		bg->Update(deltaTime);
-		bg->Set2DPosition(bg->Get2DPosition().x - BACKGROUND_SPEED *deltaTime, screenHeight / 2);
-		if (bg->Get2DPosition().x <= -screenWidth / 2) {
-			bg->Set2DPosition(bg->Get2DPosition().x + 2 * screenWidth, screenHeight / 2);
+		bg->Set2DPosition(screenWidth / 2, bg->Get2DPosition().y + BACKGROUND_SPEED *deltaTime);
+		if (bg->Get2DPosition().y >= screenHeight * 3 / 2) {
+			bg->Set2DPosition(screenWidth / 2, bg->Get2DPosition().y - 2 * screenHeight);
 		}
 	}
 }
