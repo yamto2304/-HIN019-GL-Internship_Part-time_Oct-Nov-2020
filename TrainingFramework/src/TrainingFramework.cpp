@@ -59,7 +59,7 @@ GLint _tmain(GLint argc, _TCHAR* argv[])
 	CleanUp();
 
 	//identifying memory leaks
-	MemoryDump();
+	//MemoryDump();
 	//printf("Press any key...\n");
 	//_getch();
 

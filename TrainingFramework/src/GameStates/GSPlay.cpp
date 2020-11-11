@@ -14,10 +14,14 @@
 #include "Enemy.h"
 #include "Bullet.h"
 
+#include "soloud.h"
+#include "soloud_wav.h"
+
 
 int DIRECTION = 0;
 float timeAction = 0;
 float m_time = 0;
+bool isEnemyDestroy = false;
 
 extern int screenWidth; //need get on Graphic engine   ||480
 extern int screenHeight; //need get on Graphic engine  ||700
@@ -69,7 +73,7 @@ bool GSPlay::CheckCollision(std::shared_ptr<Sprite2D> bullet, std::shared_ptr<Sp
 void GSPlay::Init()
 {
     auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D");
-    auto texture = ResourceManagers::GetInstance()->GetTexture("bg_night");
+    auto texture = ResourceManagers::GetInstance()->GetTexture("bg1");
     auto shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
 
     //BackGround
@@ -122,7 +126,7 @@ void GSPlay::Init()
     {
         texture = ResourceManagers::GetInstance()->GetTexture("button_back");
         std::shared_ptr<GameButton> button = std::make_shared<GameButton>(model, shader, texture);
-        button->Set2DPosition(screenWidth / 2, 250);
+        button->Set2DPosition(screenWidth / 2, 50);
         button->SetSize(200, 50);
         button->SetOnClick([]() {
             GameStateMachine::GetInstance()->PopState();
@@ -254,7 +258,7 @@ void GSPlay::Update(float deltaTime)
         bg->Update(deltaTime);
         bg->Set2DPosition(screenWidth / 2, bg->Get2DPosition().y + BACKGROUND_SPEED *deltaTime);
         if (bg->Get2DPosition().y >= screenHeight * 3 / 2) {
-            bg->Set2DPosition(screenWidth / 2, bg->Get2DPosition().y - 2 * screenHeight + 5);//hard code
+            bg->Set2DPosition(screenWidth / 2, bg->Get2DPosition().y - 2 * screenHeight);//hard code
         }
     }
 
@@ -410,14 +414,23 @@ void GSPlay::Update(float deltaTime)
     {
         //for (auto enemy : m_listEnemy) {
             bullet->Update(deltaTime);
-            if (bullet->IsActive() && CheckCollision(bullet, m_Enemy))
+			Vector2 oldPosBullet = bullet->Get2DPosition();
+			Vector2 oldPosB = bullet->Get2DPosition();
+            if (bullet->IsActive() && CheckCollision(bullet, m_Enemy) && !isEnemyDestroy)
             {
-                bullet->m_isActive = false;
+
+               // bullet->m_isActive = false;
                 bullet->Set2DPosition(240, 500);
+				//ResourceManagers::GetInstance()->PlaySound("fire");
+				//bullet->m_isActive = true;
+				
             }
+			else if (oldPosB.y < 0) {
+				bullet->Set2DPosition(240, 500);
+				bullet->m_isActive = true;
+			}
             else {
-                Vector2 oldPosBullet = bullet->Get2DPosition();
-                Vector2 oldPosB = bullet->Get2DPosition();
+                
                 int newPosBulletY = oldPosB.y - BULLET_SPEED * deltaTime / 2;
 
                 bullet->Set2DPosition(oldPosB.x, newPosBulletY);
@@ -425,30 +438,25 @@ void GSPlay::Update(float deltaTime)
             
         //}
     }
-    //m_Bullet->Update(deltaTime);
-    
-    /*Vector2 oldPosBullet = m_Bullet->Get2DPosition();
-    Vector2 oldPosB = m_Bullet->Get2DPosition();
-    int newPosBulletY = oldPosB.y - BULLET_SPEED * deltaTime / 10;
-
-    m_Bullet->Set2DPosition(oldPosB.x, newPosBulletY);*/
 
     //Handle enemy state
-    bool isDestroy = false;
+    
     m_Enemy->Update(deltaTime);
-    if (CheckCollision(m_Bullet, m_Enemy))
+    if (CheckCollision(m_Bullet, m_Enemy) && !isEnemyDestroy)
     {
         newTexture = ResourceManagers::GetInstance()->GetTexture("exfinal");
+		ResourceManagers::GetInstance()->PlaySound("fire");
         //m_Enemy->ChangeEnemyState(DESTROYING);
         m_Enemy->SetTexture(newTexture);
-        isDestroy = true;
+        isEnemyDestroy = true;
     };
-    if (isDestroy) {
+    if (isEnemyDestroy) {
         m_time += deltaTime;
-        if (m_time > 1.0) {
+        if (m_time > 0.5) {
             newTexture = ResourceManagers::GetInstance()->GetTexture("enemy");
             m_Enemy->SetTexture(newTexture);
-            m_Enemy->Set2DPosition(100, 100);
+            m_Enemy->Set2DPosition(screenWidth / 2, 250);
+			isEnemyDestroy = false;
             m_time = 0;
         }
     }
@@ -467,10 +475,10 @@ void GSPlay::Draw()
         it->Draw();
     }
     //animation
-    for (auto obj : m_listSpriteAnimations)
+    /*for (auto obj : m_listSpriteAnimations)
     {
         obj->Draw();
-    }
+    }*/
 
     m_score->Draw();
 

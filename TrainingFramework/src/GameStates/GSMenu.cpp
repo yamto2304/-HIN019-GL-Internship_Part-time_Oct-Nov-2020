@@ -16,7 +16,7 @@ GSMenu::~GSMenu()
 void GSMenu::Init()
 {
 	auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D");
-	auto texture = ResourceManagers::GetInstance()->GetTexture("bg_main_menu");
+	auto texture = ResourceManagers::GetInstance()->GetTexture("bgmain4");
 
 	//BackGround
 	auto shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
@@ -125,5 +125,5 @@ void GSMenu::Draw()
 	{
 		it->Draw();
 	}
-	m_Text_gameName->Draw();
+	//m_Text_gameName->Draw();
 }
