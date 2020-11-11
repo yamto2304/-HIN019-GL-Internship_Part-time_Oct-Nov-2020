@@ -6,6 +6,16 @@
 #include "ft2build.h"
 #include FT_FREETYPE_H
 
+#define BACKGROUND_SPEED 100
+#define PLAYER_SPEED 300
+#define PLAYER_SIZE 152
+
+#define ENEMY_SPEED 250
+#define ENEMY_SIZE 40
+
+#define BULLET_SPEED 200
+#define BULLET_SIZE 40
+
 #ifndef _WIN32_WINNT            // Specifies that the minimum required platform is Windows Vista.
 #define _WIN32_WINNT 0x0600     // Change this to the appropriate value to target other versions of Windows.
 #endif
@@ -91,10 +101,14 @@
 #define KEY_MOVE_FORWORD		87	// key w
 #define KEY_MOVE_BACKWORD		83	// key s
 
-#define MOVE_LEFT				200
-#define MOVE_RIGHT				201
-#define MOVE_DOWN				202
-#define MOVE_UP					203
+#define MOVE_LEFT				1
+#define MOVE_RIGHT				1<<1
+#define MOVE_DOWN				1<<2
+#define MOVE_UP					1<<3
+#define MOVE_LEFT_UP			9
+#define MOVE_LEFT_DOWN			5
+#define MOVE_RIGHT_UP			10
+#define MOVE_RIGHT_DOWN			6
 
 #elif ANDROID
 

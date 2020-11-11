@@ -63,10 +63,10 @@ void CustomFree(void * p)
 }
 
 //memory dump section
-void MemoryDump()
-{
-	MemoryManager::GetInstance()->Dump();
-}
+//void MemoryDump()
+//{
+//	MemoryManager::GetInstance()->Dump();
+//}
 
 //sanity check
 void SanityCheck()
