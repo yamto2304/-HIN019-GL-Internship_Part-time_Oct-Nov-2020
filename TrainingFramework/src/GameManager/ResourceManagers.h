@@ -47,7 +47,8 @@ private:
 	//Sound
 	std::string m_SoundsPath;
 	std::map<std::string, std::shared_ptr<SoLoud::Wav>> m_MapWave;
-	std::shared_ptr<SoLoud::Soloud> m_Soloud; //Engine core
+	//std::shared_ptr<SoLoud::Soloud> m_Soloud; //Engine core
+	SoLoud::Soloud m_Soloud;
 
 	std::string m_ShaderPath;
 	std::string m_TexturePath;

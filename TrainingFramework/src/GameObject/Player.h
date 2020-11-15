@@ -1,5 +1,7 @@
 #pragma once
 #include "Sprite2D.h"
+#include "GameStates\GameStatebase.h"
+#include "Bullet.h"
 
 class Player : public Sprite2D
 {
@@ -9,13 +11,15 @@ public:
 		std::shared_ptr<Texture> texture);
 	~Player();
 
-	//void	HandleTouchEvents(GLint x, GLint y, bool bIsPressed);
+	GLint GetSize();
+
 	void HandleKeyEvents(int key, bool bIsPressed);
 	void Update(GLfloat deltaTime);
-	//bool IsHandle();
+	
+	GLfloat p_Cooldown;
+	void Shoot(std::list < std::shared_ptr<Bullet>> listBullet);
 
 private:
-	//void(*m_pBtClick)();
-	//bool	m_isHandle;
+	std::list < std::shared_ptr<Bullet>> listBullet;
 };
 

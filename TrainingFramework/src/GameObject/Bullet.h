@@ -12,12 +12,18 @@ public:
 	~Bullet();
 	void Update(GLfloat deltaTime);
 	bool IsActive();
+	bool IsPlayer();
+
 	bool m_isActive;
+	bool m_isPlayer;
+	
+	int GetSpeed();
+	int GetSize();
 
 	//void ChangeBulletState(int state);
 
 private:
-	//std::shared_ptr<Sprite2D> bullet;
+	std::shared_ptr<Bullet> bullet;
 	
 };
  

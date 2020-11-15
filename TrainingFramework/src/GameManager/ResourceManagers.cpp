@@ -19,12 +19,13 @@ ResourceManagers::ResourceManagers()
 
 	//Sound
 	m_SoundsPath = dataPath + "Sound\\";
-	m_Soloud = std::make_shared<SoLoud::Soloud>();
-	m_Soloud->init();
+	//m_Soloud = std::make_shared<SoLoud::Soloud>();
+	m_Soloud.init();
 }
 
 ResourceManagers::~ResourceManagers()
 {
+	m_Soloud.deinit();
 }
 
 void ResourceManagers::AddShader(const std::string& name)
@@ -193,7 +194,7 @@ void ResourceManagers::PlaySound(const std::string& name, bool loop)
 		wave->load(wav.c_str()); //load a wav file
 		m_MapWave.insert(std::pair<std::string, std::shared_ptr<SoLoud::Wav>>(name, wave));
 	}
-	m_Soloud->play(*wave);
+	m_Soloud.play(*wave);
 }
 
 void ResourceManagers::PauseSound(const std::string& name)
@@ -204,5 +205,5 @@ void ResourceManagers::PauseSound(const std::string& name)
 	{
 		wave = it->second;
 	}
-	m_Soloud->stopAudioSource(*wave);
+	m_Soloud.stopAudioSource(*wave);
 }

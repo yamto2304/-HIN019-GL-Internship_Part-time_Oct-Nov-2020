@@ -7,13 +7,17 @@
 #include FT_FREETYPE_H
 
 #define BACKGROUND_SPEED 100
+
 #define PLAYER_SPEED 300
 #define PLAYER_SIZE 152
+#define PLAYER_COOLDOWN 0.5f
 
-#define ENEMY_SPEED 250
+#define ENEMY_SPEED 500
 #define ENEMY_SIZE 40
+#define ENEMY_COOLDOWN 2.0f
 
-#define BULLET_SPEED 200
+#define PLAYER_BULLET_SPEED -500
+#define ENEMY_BULLET_SPEED 200
 #define BULLET_SIZE 40
 
 #ifndef _WIN32_WINNT            // Specifies that the minimum required platform is Windows Vista.

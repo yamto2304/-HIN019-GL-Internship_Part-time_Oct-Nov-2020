@@ -8,8 +8,7 @@ Player::Player(std::shared_ptr<Models> model,
 	std::shared_ptr<Texture> texture)
 	: Sprite2D(model, shader, texture)
 {
-	/*m_pBtClick = nullptr;
-	m_isHandle = false;*/
+	p_Cooldown = PLAYER_COOLDOWN;
 }
 
 
@@ -25,4 +24,24 @@ void Player::HandleKeyEvents(int key, bool bIsPressed)
 void Player::Update(GLfloat deltaTime)
 {
 		
+}
+
+void Player::Shoot(std::list < std::shared_ptr<Bullet>> listBullet)
+{
+	Vector2 pos = Get2DPosition();
+	for (auto bullet : listBullet) {
+		if (bullet->IsActive() == false) {
+			auto newTexture = ResourceManagers::GetInstance()->GetTexture("player_bullet");
+			bullet->SetTexture(newTexture);
+			bullet->Set2DPosition(pos);
+			bullet->m_isPlayer = true;
+			bullet->m_isActive = true;
+			printf("shot in player \n");
+			break;
+		}
+	}
+}
+
+GLint Player::GetSize() {
+	return PLAYER_SIZE;
 }

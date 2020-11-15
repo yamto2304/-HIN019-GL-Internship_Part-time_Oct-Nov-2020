@@ -10,6 +10,7 @@ protected:
 	Vector2			m_Vec2DPos;
 	GLint			m_iHeight;
 	GLint			m_iWidth;
+	GLint			m_size;
 
 public:
 	Sprite2D(std::shared_ptr<Models> model, std::shared_ptr<Shaders> shader, std::shared_ptr<Texture> texture);
@@ -29,5 +30,6 @@ public:
 	Vector2		Get2DPosition();
 	void		SetSize(GLint width, GLint height);
 
+	GLint		GetSize();
 };
 

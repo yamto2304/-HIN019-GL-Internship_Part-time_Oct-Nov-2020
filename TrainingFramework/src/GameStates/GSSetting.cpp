@@ -24,10 +24,10 @@ void GSSetting::Init()
 	m_BackGround->SetSize(screenWidth, screenHeight);
 
 	//back button
-	texture = ResourceManagers::GetInstance()->GetTexture("button_back");
+	texture = ResourceManagers::GetInstance()->GetTexture("btn_home");
 	std::shared_ptr<GameButton> button = std::make_shared<GameButton>(model, shader, texture);
 	button->Set2DPosition(screenWidth / 2, 250);
-	button->SetSize(200, 50);
+	button->SetSize(100, 75);
 	button->SetOnClick([]() {
 		GameStateMachine::GetInstance()->PopState();
 	});

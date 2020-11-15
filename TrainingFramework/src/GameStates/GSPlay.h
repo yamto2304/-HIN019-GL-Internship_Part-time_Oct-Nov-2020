@@ -32,23 +32,26 @@ public:
 
 	void SetNewPostionForBullet();
 
-	bool CheckCollision(std::shared_ptr<Sprite2D> bullet, std::shared_ptr<Sprite2D> enemy);
+	bool CheckCollision(std::shared_ptr<Sprite2D> obj1, std::shared_ptr<Sprite2D> obj2);
+
+	
 
 private:
 
 	std::shared_ptr<Sprite2D> m_BackGround;
-	std::shared_ptr<Sprite2D> m_Player;
-	std::shared_ptr<Sprite2D> m_Enemy;
+	std::shared_ptr<Player> m_Player;
+
+	std::shared_ptr<Enemy> m_Enemy;
 	std::shared_ptr<Bullet> m_Bullet;
-	//float m_time;
 
 	std::shared_ptr<Text>  m_score;
 	std::shared_ptr<Text>  m_text;
 
 	std::list<std::shared_ptr<GameButton>>	m_listButton;
 
-	std::vector < std::shared_ptr<Sprite2D>> m_listEnemy;
+	std::list < std::shared_ptr<Enemy>> m_listEnemy;
 	std::list < std::shared_ptr<Bullet>> m_listBullet;
+
 	std::vector < std::shared_ptr<Sprite2D>> m_listSprite2D;
 	
 	std::vector < std::shared_ptr<SpriteAnimation>> m_listSpriteAnimations;
