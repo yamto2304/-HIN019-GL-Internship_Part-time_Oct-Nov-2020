@@ -38,6 +38,11 @@ void Bullet::Update(GLfloat deltaTime)
 	}
 }
 
+int Bullet::GetSpeed() {
+	if (m_isPlayer)
+		return PLAYER_BULLET_SPEED;
+	return ENEMY_BULLET_SPEED;
+}
 
 bool Bullet::IsActive()
 {
@@ -53,8 +58,3 @@ int Bullet::GetSize() {
 	return BULLET_SIZE;
 }
 
-int Bullet::GetSpeed() {
-	if (m_isPlayer)
-		return PLAYER_BULLET_SPEED;
-	return ENEMY_BULLET_SPEED;
-}

@@ -37,7 +37,7 @@ void Player::Shoot(std::list < std::shared_ptr<Bullet>> listBullet)
 			bullet->m_isPlayer = true;
 			bullet->m_isActive = true;
 			printf("shot in player \n");
-			break;
+			return;
 		}
 	}
 }
