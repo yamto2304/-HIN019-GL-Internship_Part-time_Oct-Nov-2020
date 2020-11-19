@@ -1,3 +1,203 @@
-﻿  Player.cpp
-  TrainingFramework.vcxproj -> C:\Users\Tuani\OneDrive\Documents\Visual Studio 2015\Projects\-HIN019-Gameloft-Internship_Part-time_Oct-Nov-2020\\BIN-Nvidia\TrainingFramework.exe
-  TrainingFramework.vcxproj -> C:\Users\Tuani\OneDrive\Documents\Visual Studio 2015\Projects\-HIN019-Gameloft-Internship_Part-time_Oct-Nov-2020\\BIN-Nvidia\TrainingFramework.pdb (Full PDB)
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug-Nvidia\) contains files shared from another project (TrainingFramework.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  TrainingFramework.cpp
+  GSPlay.cpp
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(71): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(76): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(95): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(152): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(163): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(287): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(289): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(304): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(307): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(309): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(315): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(318): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(320): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(326): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(329): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(331): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(337): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(340): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(342): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(349): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(352): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(357): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(360): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(362): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(369): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(372): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(376): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(379): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(382): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(389): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(392): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(396): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(399): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(401): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(408): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(411): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(415): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(418): warning C4244: '=': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(420): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(901): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[5],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[5],TEXT_COLOR &&,double &&)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[5],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[5],TEXT_COLOR &&,double &&)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+  c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsplay.cpp(162): note: see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[5],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[5],TEXT_COLOR &&,double &&)' being compiled
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(439): note: see reference to class template instantiation 'std::_Ptr_base<_Ty>' being compiled
+          with
+          [
+              _Ty=Texture
+          ]
+  c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\baseobject.h(25): note: see reference to class template instantiation 'std::shared_ptr<Texture>' being compiled
+  GSMenu.cpp
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsmenu.cpp(34): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsmenu.cpp(42): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsmenu.cpp(53): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsmenu.cpp(63): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsmenu.cpp(73): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsmenu.cpp(83): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsmenu.cpp(97): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsmenu.cpp(106): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsmenu.cpp(116): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(901): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[5],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[5],TEXT_COLOR &&,double &&)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[5],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[5],TEXT_COLOR &&,double &&)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+  c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsmenu.cpp(52): note: see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[5],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[5],TEXT_COLOR &&,double &&)' being compiled
+  GSIntro.cpp
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsintro.cpp(30): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  Sprite2D.cpp
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\sprite2d.cpp(143): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\sprite2d.cpp(144): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\sprite2d.cpp(154): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\sprite2d.cpp(155): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  ResourceManagers.cpp
+  GSCredit.cpp
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gscredit.cpp(30): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gscredit.cpp(36): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gscredit.cpp(49): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gscredit.cpp(56): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gscredit.cpp(60): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gscredit.cpp(64): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(901): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[5],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[5],TEXT_COLOR &&,double &&)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[5],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[5],TEXT_COLOR &&,double &&)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+  c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gscredit.cpp(48): note: see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[5],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[5],TEXT_COLOR &&,double &&)' being compiled
+  GSGameOver.cpp
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsgameover.cpp(24): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsgameover.cpp(30): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsgameover.cpp(43): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(901): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,std::basic_string<char,std::char_traits<char>,std::allocator<char>>,TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&,TEXT_COLOR &&,double &&)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,std::basic_string<char,std::char_traits<char>,std::allocator<char>>,TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&,TEXT_COLOR &&,double &&)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+  c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gsgameover.cpp(42): note: see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,std::string,TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,std::string &&,TEXT_COLOR &&,double &&)' being compiled
+  Enemy.cpp
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\player.h(20): error C2065: 'Bullet': undeclared identifier
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\player.h(20): error C2923: 'std::shared_ptr': 'Bullet' is not a valid template type argument for parameter '_Ty'
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\player.h(20): error C3203: 'shared_ptr': unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\player.h(24): error C2065: 'Bullet': undeclared identifier
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\player.h(24): error C2923: 'std::shared_ptr': 'Bullet' is not a valid template type argument for parameter '_Ty'
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\player.h(24): error C3203: 'shared_ptr': unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\enemy.cpp(67): warning C4244: 'initializing': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\enemy.cpp(73): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\enemy.cpp(89): warning C4244: 'initializing': conversion from 'GLfloat' to 'int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\enemy.cpp(94): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\enemy.cpp(130): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\enemy.cpp(142): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\enemy.cpp(143): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  Bullet.cpp
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\player.h(20): error C2065: 'Bullet': undeclared identifier
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\player.h(20): error C2923: 'std::shared_ptr': 'Bullet' is not a valid template type argument for parameter '_Ty'
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\player.h(20): error C3203: 'shared_ptr': unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\player.h(24): error C2065: 'Bullet': undeclared identifier
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\player.h(24): error C2923: 'std::shared_ptr': 'Bullet' is not a valid template type argument for parameter '_Ty'
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\player.h(24): error C3203: 'shared_ptr': unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
+  Generating Code...
+  Compiling...
+  GameStateMachine.cpp
+  GameStatebase.cpp
+  Texture.cpp
+  Text.cpp
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\text.cpp(24): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\text.cpp(25): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\text.cpp(171): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\text.cpp(172): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\text.cpp(182): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\text.cpp(183): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  SpriteAnimation.cpp
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\spriteanimation.cpp(105): warning C4244: 'argument': conversion from 'GLint' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\spriteanimation.cpp(110): warning C4244: 'argument': conversion from 'GLint' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\spriteanimation.cpp(138): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\spriteanimation.cpp(139): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\spriteanimation.cpp(149): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\spriteanimation.cpp(150): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Shaders.cpp
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\shaders.cpp(25): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'const std::string'
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\shaders.cpp(32): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'const std::string'
+  Models.cpp
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\models.cpp(25): warning C4244: 'initializing': conversion from 'std::streamoff' to 'std::size_t', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\models.cpp(10): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'const std::string'
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\models.cpp(13): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'const std::string'
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\models.cpp(35): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\stdio.h(2263): note: see declaration of 'sscanf'
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\models.cpp(40): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\stdio.h(2263): note: see declaration of 'sscanf'
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\models.cpp(62): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\stdio.h(2263): note: see declaration of 'sscanf'
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\models.cpp(68): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.18362.0\ucrt\stdio.h(2263): note: see declaration of 'sscanf'
+  Sprite3D.cpp
+  Camera.cpp
+  GameButton.cpp
+  Font.cpp
+  Application.cpp
+  GSSetting.cpp
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gssetting.cpp(23): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gssetting.cpp(29): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gssetting.cpp(40): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(901): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[14],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[14],TEXT_COLOR &&,double &&)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[14],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[14],TEXT_COLOR &&,double &&)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+  c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gamestates\gssetting.cpp(39): note: see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shaders>&,std::shared_ptr<Font>&,const char(&)[14],TEXT_COLOR,double>(std::shared_ptr<Shaders> &,std::shared_ptr<Font> &,const char (&)[14],TEXT_COLOR &&,double &&)' being compiled
+  Player.cpp
+  Generating Code...

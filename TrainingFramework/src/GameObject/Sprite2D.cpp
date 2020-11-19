@@ -173,5 +173,5 @@ void Sprite2D::SetSize(GLint width, GLint height)
 }
 
 GLint Sprite2D::GetSize() {
-	return m_iHeight;
+	return m_iWidth / 2;
 }

@@ -1,5 +1,6 @@
 #pragma once
 #include "Sprite2D.h"
+#include "Player.h"
 
 //enum BulletState { BACTIVE, BINACTIVE};
 
@@ -16,14 +17,18 @@ public:
 
 	bool m_isActive;
 	bool m_isPlayer;
+	bool m_isFastShip;
 	
 	int GetSpeed();
 	int GetSize();
-
+	int damage;
+//	void FastAttack(std::shared_ptr<Player> player, GLfloat deltaTime);
+	void CheckPosition();
 	//void ChangeBulletState(int state);
 
 private:
 	std::shared_ptr<Bullet> bullet;
+	//std::shared_ptr<Player> player;
 	
 };
  

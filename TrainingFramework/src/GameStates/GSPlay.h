@@ -40,8 +40,10 @@ private:
 
 	std::shared_ptr<Sprite2D> m_BackGround;
 	std::shared_ptr<Player> m_Player;
-
+	std::shared_ptr<Enemy> Boss;
+	
 	std::shared_ptr<Enemy> m_Enemy;
+	std::shared_ptr<Bullet> m_FastEnemy;
 	std::shared_ptr<Bullet> m_Bullet;
 
 	std::shared_ptr<Text>  m_score;
@@ -50,7 +52,9 @@ private:
 	std::list<std::shared_ptr<GameButton>>	m_listButton;
 
 	std::list < std::shared_ptr<Enemy>> m_listEnemy;
+	std::list < std::shared_ptr<Bullet>> m_listFastEnemy;
 	std::list < std::shared_ptr<Bullet>> m_listBullet;
+	std::list < std::shared_ptr<Text>> m_listText;
 
 	std::vector < std::shared_ptr<Sprite2D>> m_listSprite2D;
 	

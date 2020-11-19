@@ -75,6 +75,7 @@
     <ClCompile Include="src\GameObject\Player.cpp" />
     <ClCompile Include="src\GameObject\Enemy.cpp" />
     <ClCompile Include="src\GameObject\Bullet.cpp" />
+    <ClCompile Include="src\GameStates\GSGameOver.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Application.h">
@@ -140,6 +141,7 @@
     <ClInclude Include="src\GameObject\Player.h" />
     <ClInclude Include="src\GameObject\Enemy.h" />
     <ClInclude Include="src\GameObject\Bullet.h" />
+    <ClInclude Include="src\GameStates\GSGameOver.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

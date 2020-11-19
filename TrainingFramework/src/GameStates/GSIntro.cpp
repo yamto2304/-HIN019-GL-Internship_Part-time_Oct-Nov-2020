@@ -1,5 +1,7 @@
 #include "GSIntro.h"
 
+#include "soloud.h"
+#include "soloud_wav.h"
 
 extern int screenWidth; //need get on Graphic engine
 extern int screenHeight; //need get on Graphic engine
@@ -18,13 +20,15 @@ GSIntro::~GSIntro()
 
 void GSIntro::Init()
 {
+	ResourceManagers::GetInstance()->PlaySound("intro");
+
 	auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D");
 	auto shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
-	auto texture = ResourceManagers::GetInstance()->GetTexture("intro");
+	auto texture = ResourceManagers::GetInstance()->GetTexture("logo1");
 
 	m_logo = std::make_shared<Sprite2D>(model, shader, texture);
 	m_logo->Set2DPosition(screenWidth / 2, screenHeight / 2);
-	m_logo->SetSize(screenWidth, screenHeight);
+	m_logo->SetSize(screenWidth, 320);
 }
 
 void GSIntro::Exit()

@@ -1,1 +1,22 @@
-﻿LINK : fatal error LNK1104: cannot open file 'C:\Users\Tuani\OneDrive\Documents\Visual Studio 2015\Projects\-HIN019-Gameloft-Internship_Part-time_Oct-Nov-2020\\BIN-Nvidia\TrainingFramework.exe'
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Release-Nvidia\) contains files shared from another project (TrainingFramework.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Bullet.cpp
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\Player.h(20): error C2065: 'Bullet': undeclared identifier
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\Player.h(20): error C2923: 'std::shared_ptr': 'Bullet' is not a valid template type argument for parameter '_Ty'
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\Player.h(20): error C3203: 'shared_ptr': unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\Player.h(24): error C2065: 'Bullet': undeclared identifier
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\Player.h(24): error C2923: 'std::shared_ptr': 'Bullet' is not a valid template type argument for parameter '_Ty'
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\Player.h(24): error C3203: 'shared_ptr': unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
+  Enemy.cpp
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\Player.h(20): error C2065: 'Bullet': undeclared identifier
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\Player.h(20): error C2923: 'std::shared_ptr': 'Bullet' is not a valid template type argument for parameter '_Ty'
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\Player.h(20): error C3203: 'shared_ptr': unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\Player.h(24): error C2065: 'Bullet': undeclared identifier
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\Player.h(24): error C2923: 'std::shared_ptr': 'Bullet' is not a valid template type argument for parameter '_Ty'
+c:\users\tuani\onedrive\documents\visual studio 2015\projects\-hin019-gameloft-internship_part-time_oct-nov-2020\trainingframework\src\gameobject\Player.h(24): error C3203: 'shared_ptr': unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
+src\GameObject\Enemy.cpp(67): warning C4244: 'initializing': conversion from 'GLfloat' to 'int', possible loss of data
+src\GameObject\Enemy.cpp(73): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+src\GameObject\Enemy.cpp(89): warning C4244: 'initializing': conversion from 'GLfloat' to 'int', possible loss of data
+src\GameObject\Enemy.cpp(94): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+src\GameObject\Enemy.cpp(130): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+src\GameObject\Enemy.cpp(142): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+src\GameObject\Enemy.cpp(143): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data

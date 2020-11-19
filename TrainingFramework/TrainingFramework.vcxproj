@@ -31,6 +31,7 @@
     <RootNamespace>TrainingFramework</RootNamespace>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <ProjectName>SpaceWar</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Angle|Win32'" Label="Configuration">
@@ -155,8 +156,8 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>libEGL.lib;libGLESv2.lib;WinMM.Lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)\Lib\Nvidia;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libEGL.lib;libGLESv2.lib;WinMM.Lib;soloud_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Lib\Nvidia;$(SolutionDir)\Lib\Soloud;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
@@ -263,6 +264,7 @@
     <ClCompile Include="src\GameObject\Bullet.cpp" />
     <ClCompile Include="src\GameObject\Enemy.cpp" />
     <ClCompile Include="src\GameObject\Player.cpp" />
+    <ClCompile Include="src\GameStates\GSGameOver.cpp" />
     <ClCompile Include="src\GameStates\GSSetting.cpp" />
     <ClCompile Include="src\GameStates\GSCredit.cpp" />
     <ClCompile Include="src\Application.cpp" />
@@ -287,6 +289,7 @@
     <ClCompile Include="src\TrainingFramework.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\GameStates\GSGameOver.h" />
     <ClInclude Include="src\GameObject\Bullet.h" />
     <ClInclude Include="src\GameObject\Enemy.h" />
     <ClInclude Include="src\GameObject\Player.h" />

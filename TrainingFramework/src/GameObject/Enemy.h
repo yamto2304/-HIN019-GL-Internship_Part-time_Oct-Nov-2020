@@ -3,8 +3,6 @@
 #include "GameStates\GameStatebase.h"
 #include "Bullet.h"
 
-enum EnemyState { INACTIVE, ACTIVE, DESTROYING};
-
 class Enemy : public Sprite2D
 {
 public:
@@ -17,13 +15,23 @@ public:
 
 	Vector2 makeRandom();
 
-	void Shoot(std::list<std::shared_ptr<Bullet>> listBullet, std::list<std::shared_ptr<Bullet>> listActiveBullet);
+	void Shoot(std::list<std::shared_ptr<Bullet>> listBullet, int damage);
+	void BossShoot(std::list<std::shared_ptr<Bullet>> listBullet, int damage);
+	void Moving(GLfloat deltaTime);
+	void FastMoving(GLfloat deltaTime);
+	void Destroying(GLfloat deltaTime);
+	void BossAttack(std::list<std::shared_ptr<Bullet>> listBullet, int damage, bool isLeftSide);
 
 	GLfloat e_Cooldown;
 
 	GLint GetSize();
+
+	GLfloat timeExplose = 0;
+	bool e_isActive;
+	bool isBoss;
+	bool isEnemyDestroy;
+	int HP;
 private:
 	std::vector<std::shared_ptr<Sprite2D>> m_ListState;
 	std::list < std::shared_ptr<Bullet>> listBullet;
-	std::list < std::shared_ptr<Bullet>> listActiveBullet;
 };

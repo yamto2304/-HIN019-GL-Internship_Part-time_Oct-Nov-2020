@@ -1,7 +1,7 @@
 #include "Enemy.h"
 
-
-#include <time.h>
+#include <cstdlib>
+#include <ctime>
 
 //#include "Singleton.h"
 
@@ -14,6 +14,7 @@ Enemy::Enemy(std::shared_ptr<Models> model,
 	: Sprite2D(model, shader, texture)
 {
 	e_Cooldown = ENEMY_COOLDOWN;
+	isEnemyDestroy = false;
 }
 
 Enemy::~Enemy()
@@ -21,29 +22,115 @@ Enemy::~Enemy()
 }
 
 void Enemy::Update(GLfloat deltaTime) {
-	/*if (e_Cooldown <= 0) {
-		Shoot();
-		e_Cooldown = 0.5f;
-	}
-	else {
-		e_Cooldown -= deltaTime;
-	}*/
+	
 }
 
-void Enemy::Shoot(std::list<std::shared_ptr<Bullet>> listBullet, std::list<std::shared_ptr<Bullet>> listActiveBullet) {
+void Enemy::Shoot(std::list<std::shared_ptr<Bullet>> listBullet, int damage) {
 	Vector2 pos = Get2DPosition();
-
 	for (auto bullet : listBullet) {
-			auto newTexture = ResourceManagers::GetInstance()->GetTexture("exfinal");
+		if (bullet->IsActive() == false){
+			bullet->m_isActive = true;
+			auto newTexture = ResourceManagers::GetInstance()->GetTexture("enemy_bullet");
+			bullet->SetSize(10, 36);
+			if (isBoss) {
+				newTexture = ResourceManagers::GetInstance()->GetTexture("bossbullet");
+				bullet->SetSize(25, 50);
+			}
+			
 			bullet->SetTexture(newTexture);
-			bullet->Set2DPosition(pos);
+			bullet->Set2DPosition(pos.x, pos.y + ENEMY_SIZE);
+			
 			bullet->m_isPlayer = false;
 			//bullet->m_isActive = true;
-			
-			listActiveBullet.push_back(bullet);
-			//listBullet.pop_back(bullet);
+			bullet->damage = damage;
 			break;
-			//}
+		}
+	}
+}
+
+//BossShoot
+void Enemy::BossShoot(std::list<std::shared_ptr<Bullet>> listBullet, int damage) {
+
+}
+//Basic enemy
+void Enemy::Moving(GLfloat deltaTime) {
+	if (e_isActive) {
+		int direc = 1;
+		//Handle moving random
+		Vector2 oldPosEnemy = Get2DPosition();
+		if (oldPosEnemy.y < -BULLET_SIZE || oldPosEnemy.y > screenHeight + BULLET_SIZE || oldPosEnemy.x < -BULLET_SIZE || oldPosEnemy.x > screenWidth + BULLET_SIZE) {
+
+			Set2DPosition(ENEMY_GATE_1);
+
+		}
+		else {
+			int newPosEnemyX = oldPosEnemy.x + direc * ENEMY_SPEED * deltaTime;
+			int newPosEnemyY = newPosEnemyX*newPosEnemyX*newPosEnemyX - 12 * newPosEnemyX*newPosEnemyX + 47 * newPosEnemyX - 54;
+
+			Vector2 p = makeRandom();
+			//printf("%d %d \n", p.x, p.y);
+
+			Set2DPosition(newPosEnemyX, newPosEnemyX);
+		}
+
+	}
+}
+
+//FastEnemy
+void Enemy::FastMoving(GLfloat deltaTime) {
+	if (e_isActive) {
+		Vector2 oldPosEnemy = Get2DPosition();
+		/*if (oldPosEnemy.y < -BULLET_SIZE || oldPosEnemy.y > screenHeight + BULLET_SIZE || oldPosEnemy.x < -BULLET_SIZE || oldPosEnemy.x > screenWidth + BULLET_SIZE) {
+
+			Set2DPosition(ENEMY_GATE_1);
+
+		}*/
+		//else {
+			int newPosEnemyX = oldPosEnemy.x + ENEMY_SPEED * deltaTime;
+			int newPosEnemyY = newPosEnemyX*newPosEnemyX*newPosEnemyX - 12 * newPosEnemyX*newPosEnemyX + 47 * newPosEnemyX - 54;
+
+			//printf("%d %d \n", p.x, p.y);
+
+			Set2DPosition(newPosEnemyX, newPosEnemyX);
+		//}
+	}
+}
+
+//FastEnemy
+void Enemy::BossAttack(std::list<std::shared_ptr<Bullet>> listBullet, int damage, bool isLeftSide) {
+	Vector2 pos = Get2DPosition();
+	for (auto bullet : listBullet) {
+		if (bullet->IsActive() == false) {
+			bullet->m_isPlayer = false;
+			bullet->m_isActive = true;
+			bullet->damage = damage;
+
+			auto newTexture = ResourceManagers::GetInstance()->GetTexture("enemy_fast");
+			bullet->SetSize(25, 50);
+			
+			bullet->SetTexture(newTexture);
+			if (isLeftSide) {
+				bullet->Set2DPosition(pos.x - 120, pos.y - 120);
+				printf("shot left\n");
+			}
+			else {
+				bullet->Set2DPosition(pos.x + 120, pos.y - 120);
+				printf("shot right\n");
+			}
+			break;
+		}
+	}
+}
+
+void Enemy::Destroying(GLfloat deltaTime) {
+	timeExplose += deltaTime;
+	if (timeExplose > 2.0) {
+		auto newTexture = ResourceManagers::GetInstance()->GetTexture("enemy");
+		SetTexture(newTexture);
+		Set2DPosition(screenWidth / 2, 250);
+		isEnemyDestroy = false;
+		e_isActive = true;
+		timeExplose = 0;
 	}
 }
 
@@ -52,7 +139,7 @@ GLint Enemy::GetSize() {
 }
 
 Vector2 Enemy::makeRandom() {
-	srand((unsigned)time(0));
-	return Vector2(900 + rand() % 400, 370);
+	srand(time(NULL));
+	return Vector2(rand() % 5 + 1,rand() % 5 + 1);
 }
 

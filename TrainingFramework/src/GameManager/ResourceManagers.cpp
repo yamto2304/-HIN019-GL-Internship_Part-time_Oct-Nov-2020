@@ -194,7 +194,8 @@ void ResourceManagers::PlaySound(const std::string& name, bool loop)
 		wave->load(wav.c_str()); //load a wav file
 		m_MapWave.insert(std::pair<std::string, std::shared_ptr<SoLoud::Wav>>(name, wave));
 	}
-	m_Soloud.play(*wave);
+	int h = m_Soloud.play(*wave);
+	m_Soloud.setLooping(h, loop);
 }
 
 void ResourceManagers::PauseSound(const std::string& name)

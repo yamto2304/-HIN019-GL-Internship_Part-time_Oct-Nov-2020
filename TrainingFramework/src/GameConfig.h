@@ -11,14 +11,31 @@
 #define PLAYER_SPEED 300
 #define PLAYER_SIZE 152
 #define PLAYER_COOLDOWN 0.5f
+#define PLAYER_DAMAGE 1
 
-#define ENEMY_SPEED 500
+#define ENEMY_SPEED 200
 #define ENEMY_SIZE 40
-#define ENEMY_COOLDOWN 2.0f
+#define ENEMY_COOLDOWN 0.5f
+#define FAST_ENEMY_COOLDOWN 1.0f
 
-#define PLAYER_BULLET_SPEED -500
+#define PLAYER_BULLET_SPEED -800
 #define ENEMY_BULLET_SPEED 200
 #define BULLET_SIZE 40
+
+#define BASE_BULLET_POSITION 100,250
+#define BASE_ENEMY_POSITION  300,100
+#define ENEMY_GATE_1		 10  ,120
+#define ENEMY_GATE_2		 10  ,240
+#define ENEMY_GATE_3		 10  ,360
+
+#define BUTTON_SIZE			 300, 100
+
+#define HP_ENEMY_BASIC		 3
+#define DAMAGE_ENEMY_BASIC	 2
+#define DAMAGE_BOSS			 5
+#define HP_ENEMY_FAST		 2
+#define HP_BOSS				 25
+#define HP_PLAYER			 20
 
 #ifndef _WIN32_WINNT            // Specifies that the minimum required platform is Windows Vista.
 #define _WIN32_WINNT 0x0600     // Change this to the appropriate value to target other versions of Windows.
