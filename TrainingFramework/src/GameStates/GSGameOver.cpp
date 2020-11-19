@@ -16,7 +16,9 @@ GSGameOver::~GSGameOver()
 void GSGameOver::Init()
 {
 	auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D");
-	auto texture = ResourceManagers::GetInstance()->GetTexture("highscore");
+	auto texture = ResourceManagers::GetInstance()->GetTexture
+	("highscore");
+	auto shaderText = ResourceManagers::GetInstance()->GetShader("TextShader");
 
 	//BackGround
 	auto shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
@@ -25,20 +27,26 @@ void GSGameOver::Init()
 	m_BackGround->SetSize(400, 400);
 
 	//back button
-	texture = ResourceManagers::GetInstance()->GetTexture("btn_home");
+	texture = ResourceManagers::GetInstance()->GetTexture("button");
 	std::shared_ptr<GameButton> button = std::make_shared<GameButton>(model, shader, texture);
-	button->Set2DPosition(screenWidth / 2, 100);
-	button->SetSize(100, 75);
+	button->Set2DPosition(screenWidth / 2, 50);
+	button->SetSize(150, 50);
 	button->SetOnClick([]() {
-		GameStateMachine::GetInstance()->ChangeState(StateTypes::STATE_Menu);
 		ResourceManagers::GetInstance()->PauseSound("bground");
-		//ResourceManagers::GetInstance()->PauseSound("bgboss");
+		GameStateMachine::GetInstance()->ChangeState(StateTypes::STATE_Menu);
 	});
 	m_listButton.push_back(button);
 
-	//State game title
+	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("ariblk");
+	m_text = std::make_shared< Text>(shaderText, font, "MENU", TEXT_COLOR::WHILE, 0.8);
+	m_text->Set2DPosition(screenWidth / 2 - 35, 55);
+	//m_listText.push_back(m_text);
+	
+	//m_listButton.push_back(button);
+
+	//State game score
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
-	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("arialbd");
+	font = ResourceManagers::GetInstance()->GetFont("arialbd");
 	m_TextScore = std::make_shared< Text>(shader, font, std::to_string(score), TEXT_COLOR::RED, 3.0);
 	m_TextScore->Set2DPosition(Vector2(screenWidth / 2 - 100, screenHeight / 2 ));
 
@@ -95,4 +103,6 @@ void GSGameOver::Draw()
 		it->Draw();
 	}
 	m_TextScore->Draw();
+	m_text->Draw();
+	
 }

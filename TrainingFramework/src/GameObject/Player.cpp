@@ -27,23 +27,23 @@ void Player::Update(GLfloat deltaTime)
 		
 }
 
-void Player::Shoot(std::list < std::shared_ptr<Bullet>> listBullet, int damage)
-{
-	Vector2 pos = Get2DPosition();
-	for (auto bullet : listBullet) {
-		if (bullet->IsActive() == false) {
-			auto newTexture = ResourceManagers::GetInstance()->GetTexture("player_bullet");
-			bullet->SetTexture(newTexture);
-			bullet->Set2DPosition(pos);
-			bullet->SetSize(35, 35);
-			bullet->m_isPlayer = true;
-			bullet->m_isActive = true;
-			bullet->damage = damage;
-			//printf("shot in player \n");
-			break;
-		}
-	}
-}
+//void Player::Shoot(std::list < std::shared_ptr<Bullet>> listBullet, int damage)
+//{
+//	Vector2 pos = Get2DPosition();
+//	for (auto bullet : listBullet) {
+//		if (bullet->IsActive() == false) {
+//			auto newTexture = ResourceManagers::GetInstance()->GetTexture("player_bullet");
+//			bullet->SetTexture(newTexture);
+//			bullet->Set2DPosition(pos);
+//			bullet->SetSize(35, 35);
+//			bullet->m_isPlayer = true;
+//			bullet->m_isActive = true;
+//			bullet->damage = damage;
+//			//printf("shot in player \n");
+//			break;
+//		}
+//	}
+//}
 
 GLint Player::GetSize() {
 	return PLAYER_SIZE;

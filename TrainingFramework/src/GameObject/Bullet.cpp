@@ -22,10 +22,12 @@ Bullet::~Bullet()
 
 void Bullet::Update(GLfloat deltaTime)
 {
-	/*std::shared_ptr<Player> player;
+	Vector2 pos = Get2DPosition();
+	//std::shared_ptr<Player> player;
 	if (m_isFastShip && m_isActive) {
-		FastAttack(player, deltaTime);
-	}*/
+		Set2DPosition(pos.x, pos.y + GetSpeed()*deltaTime);
+		//FastAttack(player, deltaTime);
+	}
 }
 
 //void Bullet::FastAttack(std::shared_ptr<Player> player, GLfloat deltaTime) {

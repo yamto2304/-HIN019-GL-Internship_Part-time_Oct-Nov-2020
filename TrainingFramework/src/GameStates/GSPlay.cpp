@@ -160,18 +160,44 @@ void GSPlay::Init()
 
 		std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("ariblk");
 		m_text = std::make_shared< Text>(shaderText, font, "MENU", TEXT_COLOR::WHILE, 0.8);
-		m_text->Set2DPosition(screenWidth / 6 - 15, 60);
+		m_text->Set2DPosition(screenWidth / 6 - 35, 55);
 		m_listText.push_back(m_text);
     }
+	//HP
+	{
+		texture = ResourceManagers::GetInstance()->GetTexture("button");
+		std::shared_ptr<GameButton> button = std::make_shared<GameButton>(model, shader, texture);
+		button->Set2DPosition(screenWidth / 6, 650);
+		button->SetSize(150, 50);
+		m_listButton.push_back(button);
 
+		std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("ariblk");
+		m_HP = std::make_shared< Text>(shaderText, font, "HP: " + std::to_string(m_Player->HP), TEXT_COLOR::WHILE, 0.8);
+		m_HP->Set2DPosition(screenWidth / 6 - 40, 655);
+		//m_listText.push_back(m_text);
+	}
+	////Score
+	{
+		texture = ResourceManagers::GetInstance()->GetTexture("button");
+		std::shared_ptr<GameButton> button = std::make_shared<GameButton>(model, shader, texture);
+		button->Set2DPosition(5 * screenWidth / 6 - 5, 650);
+		button->SetSize(150, 50);
+		
+		m_listButton.push_back(button);
+
+		std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("ariblk");
+		m_score = std::make_shared< Text>(shaderText, font, "Score: " + 0, TEXT_COLOR::WHILE, 0.8);
+		m_score->Set2DPosition(5 * screenWidth / 6 - 35, 655);
+		//m_listText.push_back(m_text);
+	}
     //text game title
-    {
-        shader = ResourceManagers::GetInstance()->GetShader("TextShader");
-        std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("arialbd");
+    //{
+    //    shader = ResourceManagers::GetInstance()->GetShader("TextShader");
+    //    std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("arialbd");
 
-        m_score = std::make_shared< Text>(shader, font, "Score:" + 0, TEXT_COLOR::RED, 1.0);
-        m_score->Set2DPosition(Vector2(5, 25));
-    }
+    //    m_score = std::make_shared< Text>(shader, font, "Score:" + 0, TEXT_COLOR::RED, 1.0);
+    //    m_score->Set2DPosition(Vector2(5, 25));
+    //}
 
     // Animation
     {
@@ -429,6 +455,8 @@ void GSPlay::Update(float deltaTime)
 	//score
 	m_score->setText("Score: " + std::to_string(score));
 	m_score->Update(deltaTime);
+	m_HP->setText("HP: " + std::to_string(m_Player->HP));
+	m_HP->Update(deltaTime);
 
 	//Player shooting
 	{
@@ -684,7 +712,7 @@ void GSPlay::Draw()
     }*/
 
     m_score->Draw();
-
+	m_HP->Draw();
     m_Player->Draw();
 	Boss->Draw();
 

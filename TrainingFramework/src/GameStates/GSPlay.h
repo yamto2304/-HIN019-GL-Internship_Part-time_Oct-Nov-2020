@@ -48,6 +48,7 @@ private:
 
 	std::shared_ptr<Text>  m_score;
 	std::shared_ptr<Text>  m_text;
+	std::shared_ptr<Text>  m_HP;
 
 	std::list<std::shared_ptr<GameButton>>	m_listButton;
 
