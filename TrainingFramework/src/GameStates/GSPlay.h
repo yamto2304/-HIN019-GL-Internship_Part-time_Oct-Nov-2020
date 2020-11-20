@@ -37,7 +37,7 @@ public:
 	
 
 private:
-
+	std::shared_ptr<Sprite2D> staticBackGround;
 	std::shared_ptr<Sprite2D> m_BackGround;
 	std::shared_ptr<Player> m_Player;
 	std::shared_ptr<Enemy> Boss;

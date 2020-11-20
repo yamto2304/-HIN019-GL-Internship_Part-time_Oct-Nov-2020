@@ -78,6 +78,11 @@ void GSPlay::Init()
         m_BackGround->SetSize(screenWidth, screenHeight);
         m_listSprite2D.push_back(m_BackGround);
 
+		//staticBackGround 
+		staticBackGround = std::make_shared<Sprite2D>(model, shader, texture);
+		staticBackGround->Set2DPosition(screenWidth / 2, screenHeight / 2);
+		staticBackGround->SetSize(screenWidth, screenHeight);
+
 		if (isPlayingMusic) {
 			if(!BossMode)
 				ResourceManagers::GetInstance()->PlaySound("bground", true);
@@ -695,6 +700,7 @@ void GSPlay::Update(float deltaTime)
 void GSPlay::Draw()
 {
     //Background
+	staticBackGround->Draw();
     for (auto back_ground : m_listSprite2D)
     {
         back_ground->Draw();
