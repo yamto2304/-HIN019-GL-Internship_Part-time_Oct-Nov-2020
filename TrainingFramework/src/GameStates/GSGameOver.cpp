@@ -3,6 +3,7 @@
 extern int screenWidth; //need get on Graphic engine
 extern int screenHeight; //need get on Graphic engine
 extern int score;
+extern int highscore;
 
 GSGameOver::GSGameOver()
 {
@@ -43,7 +44,18 @@ void GSGameOver::Init()
 	//m_listText.push_back(m_text);
 	
 	//m_listButton.push_back(button);
-
+	//title
+	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
+	font = ResourceManagers::GetInstance()->GetFont("arialbd");
+	if (score > highscore) {
+		highscore = score;
+		title = std::make_shared< Text>(shader, font, "High Score:", TEXT_COLOR::RED, 1.5);
+	}
+	else {
+		title = std::make_shared< Text>(shader, font, "Your Score:", TEXT_COLOR::RED, 1.5);
+	}
+	//title = std::make_shared< Text>(shader, font, std::to_string(score), TEXT_COLOR::RED, 3.0);
+	title->Set2DPosition(Vector2(screenWidth / 2 - 100, screenHeight / 2 - 100));
 	//State game score
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
 	font = ResourceManagers::GetInstance()->GetFont("arialbd");
@@ -104,5 +116,5 @@ void GSGameOver::Draw()
 	}
 	m_TextScore->Draw();
 	m_text->Draw();
-	
+	title->Draw();
 }

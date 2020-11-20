@@ -24,9 +24,9 @@
 
 #define BASE_BULLET_POSITION 100,250
 #define BASE_ENEMY_POSITION  300,100
-#define ENEMY_GATE_1		 10  ,120
-#define ENEMY_GATE_2		 10  ,240
-#define ENEMY_GATE_3		 10  ,360
+#define ENEMY_GATE_1		 120,10
+#define ENEMY_GATE_2		 240,10
+#define ENEMY_GATE_3		 360,10
 
 #define BUTTON_SIZE			 300, 100
 

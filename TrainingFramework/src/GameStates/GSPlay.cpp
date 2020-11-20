@@ -25,6 +25,7 @@ GLfloat CD = 1.0;
 float m_timeExplose = 0;
 
 extern int score = 0;
+extern int highscore = 0;
 extern bool isPlayingMusic  = true;
 bool BossMode = false;
 bool GameOver = false;
@@ -102,7 +103,7 @@ void GSPlay::Init()
         for (int i = 1; i < 30; i++) {
             texture = ResourceManagers::GetInstance()->GetTexture("player_bullet");
             m_Bullet = std::make_shared<Bullet>(model, shader, texture);
-			m_Bullet->Set2DPosition(BASE_BULLET_POSITION);
+			m_Bullet->Set2DPosition(-50,0);
             m_Bullet->SetSize(40, 40);
             m_Bullet->m_isActive = false;
             m_listBullet.push_back(m_Bullet);
@@ -114,7 +115,7 @@ void GSPlay::Init()
 		for (int i = 1; i < 2; i++) {
 			texture = ResourceManagers::GetInstance()->GetTexture("enemy");
 			m_Enemy = std::make_shared<Enemy>(model, shader, texture);
-			m_Enemy->Set2DPosition(BASE_ENEMY_POSITION);
+			m_Enemy->Set2DPosition(0,0);
 			m_Enemy->SetSize(40, 40);
 			m_Enemy->e_isActive = true;
 			m_Enemy->isBoss = false;
@@ -127,7 +128,7 @@ void GSPlay::Init()
 		for (int i = 1; i < 11; i++) {
 			texture = ResourceManagers::GetInstance()->GetTexture("enemy_fast");
 			m_FastEnemy = std::make_shared<Bullet>(model, shader, texture);
-			m_FastEnemy->Set2DPosition(100, 400);
+			m_FastEnemy->Set2DPosition(-100, 400);
 			m_FastEnemy->SetSize(35, 70);
 			m_FastEnemy->m_isActive = false;
 			m_FastEnemy->m_isPlayer = false;
@@ -169,6 +170,9 @@ void GSPlay::Init()
 		std::shared_ptr<GameButton> button = std::make_shared<GameButton>(model, shader, texture);
 		button->Set2DPosition(screenWidth / 6, 650);
 		button->SetSize(150, 50);
+		button->SetOnClick([]() {
+			
+		});
 		m_listButton.push_back(button);
 
 		std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("ariblk");
@@ -180,25 +184,19 @@ void GSPlay::Init()
 	{
 		texture = ResourceManagers::GetInstance()->GetTexture("button");
 		std::shared_ptr<GameButton> button = std::make_shared<GameButton>(model, shader, texture);
-		button->Set2DPosition(5 * screenWidth / 6 - 5, 650);
+		button->Set2DPosition(5 * screenWidth / 6 - 15, 650);
 		button->SetSize(150, 50);
-		
+		button->SetOnClick([]() {
+			
+		});
 		m_listButton.push_back(button);
 
 		std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("ariblk");
 		m_score = std::make_shared< Text>(shaderText, font, "Score: " + 0, TEXT_COLOR::WHILE, 0.8);
-		m_score->Set2DPosition(5 * screenWidth / 6 - 35, 655);
+		m_score->Set2DPosition(5 * screenWidth / 6 - 60, 655);
 		//m_listText.push_back(m_text);
 	}
-    //text game title
-    //{
-    //    shader = ResourceManagers::GetInstance()->GetShader("TextShader");
-    //    std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("arialbd");
-
-    //    m_score = std::make_shared< Text>(shader, font, "Score:" + 0, TEXT_COLOR::RED, 1.0);
-    //    m_score->Set2DPosition(Vector2(5, 25));
-    //}
-
+   
     // Animation
     {
         shader = ResourceManagers::GetInstance()->GetShader("Animation");
@@ -461,7 +459,7 @@ void GSPlay::Update(float deltaTime)
 	//Player shooting
 	{
 		if (m_Player->p_Cooldown <= 0) {
-			//m_Player->Shoot(m_listBullet, PLAYER_DAMAGE);
+			m_Player->Shoot(m_listBullet, PLAYER_DAMAGE);
 			if (isPlayingMusic) {
 				ResourceManagers::GetInstance()->PlaySound("fire");
 			}
@@ -478,7 +476,7 @@ void GSPlay::Update(float deltaTime)
 	for (auto bullet : m_listBullet) {
 		if (bullet->IsActive() && CheckCollision(bullet, m_Player) && bullet->m_isPlayer == false) {
 			bullet->m_isActive = false;
-			bullet->Set2DPosition(BASE_BULLET_POSITION);
+			bullet->Set2DPosition(-50,0);
 			m_Player->HP -= bullet->damage;
 			printf(" player hp = %d \n", m_Player->HP);
 		}
@@ -495,7 +493,7 @@ void GSPlay::Update(float deltaTime)
 	//Vs basic enemy
 	for (auto enemy : m_listEnemy) {
 		if (enemy->e_isActive && CheckCollision(enemy, m_Player)) {
-			//enemy->Set2DPosition(BASE_ENEMY_POSITION);
+			
 			m_Player->HP -= 5;
 			printf(" player hp = %d \n", m_Player->HP);
 			newTexture = ResourceManagers::GetInstance()->GetTexture("exfinal");
@@ -504,9 +502,10 @@ void GSPlay::Update(float deltaTime)
 			}
 			enemy->SetTexture(newTexture);
 			enemy->isEnemyDestroy = true;
-			enemy->e_isActive = false;
+			//enemy->e_isActive = false;
+			enemy->Set2DPosition(0, 0);
 			enemy->HP = HP_ENEMY_BASIC;
-			score += 13;
+			score += 5;
 		}
 	}
 	//GameOver
@@ -582,9 +581,7 @@ void GSPlay::Update(float deltaTime)
 					CD -= deltaTime;
 					//printf("cooldown \n");
 				}
-				
 			}
-
 		}
 	}
 	if (Boss->isEnemyDestroy) {
@@ -597,14 +594,14 @@ void GSPlay::Update(float deltaTime)
 			//printf("cooldown \n");
 		}
 	}
+
 	for (auto bullet : m_listBullet) {
 		if (bullet->IsActive()) {
 			Vector2 posBullet = bullet->Get2DPosition();
 			posBullet.y = posBullet.y + bullet->GetSpeed() * deltaTime;
 			bullet->Set2DPosition(posBullet);
-			//bullet->CheckPosition();
 			if (posBullet.y < -BULLET_SIZE || posBullet.y > screenHeight + BULLET_SIZE || posBullet.x < -BULLET_SIZE || posBullet.x > screenWidth + BULLET_SIZE) {
-				bullet->Set2DPosition(BASE_BULLET_POSITION);
+				bullet->Set2DPosition(-50,0);
 				bullet->m_isActive = false;
 			}
 
@@ -618,7 +615,7 @@ void GSPlay::Update(float deltaTime)
 			{
 				enemy->HP -= bullet->damage;
 				bullet->m_isActive = false;
-				bullet->Set2DPosition(BASE_BULLET_POSITION);
+				bullet->Set2DPosition(-50,0);
 				if (isPlayingMusic) {
 					ResourceManagers::GetInstance()->PlaySound("fire");
 				}
@@ -628,11 +625,12 @@ void GSPlay::Update(float deltaTime)
 					if (isPlayingMusic) {
 						ResourceManagers::GetInstance()->PlaySound("bossshoot");
 					}
+					bullet->Set2DPosition(-50, 0);
 					enemy->SetTexture(newTexture);
 					enemy->isEnemyDestroy = true;
-					enemy->e_isActive = false;
+					//enemy->e_isActive = false;
 					enemy->HP = HP_ENEMY_BASIC;
-					score+=13;
+					score+=5;
 				}
 				
 			};
@@ -645,7 +643,7 @@ void GSPlay::Update(float deltaTime)
 	}
 		
 	//Boss mode
-	if (score == 26) {
+	if (score == 25) {
 		BossMode = true;
 		
 		//ResourceManagers::GetInstance()->PlaySound("bgboss", true);
@@ -671,12 +669,13 @@ void GSPlay::Update(float deltaTime)
 	{
 			if (Boss->e_Cooldown <= 0) {
 				Boss->Shoot(m_listBullet, DAMAGE_BOSS);
+				//Boss->BossShoot(m_listBullet, DAMAGE_BOSS, deltaTime);
 				/*if (isPlayingMusic) {
 					ResourceManagers::GetInstance()->PlaySound("bossshoot");
 				}*/
 				if (Boss->Get2DPosition().y >= 50) {
-					Boss->BossAttack(m_listFastEnemy, 5, true);
-					Boss->BossAttack(m_listFastEnemy, 5, false);
+					Boss->BossAttack(m_listBullet, 5, true);
+					Boss->BossAttack(m_listBullet, 5, false);
 				}
 				
 				Boss->e_Cooldown = ENEMY_COOLDOWN;

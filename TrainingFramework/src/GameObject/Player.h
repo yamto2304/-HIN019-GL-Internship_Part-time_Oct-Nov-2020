@@ -2,6 +2,7 @@
 #include "Sprite2D.h"
 #include "GameStates\GameStatebase.h"
 #include "Bullet.h"
+class Bullet;
 
 class Player : public Sprite2D
 {
@@ -17,10 +18,10 @@ public:
 	void Update(GLfloat deltaTime);
 	
 	GLfloat p_Cooldown;
-//	void Shoot(std::list<std::shared_ptr<Bullet>> listBullet, int damage);
+	void Shoot(std::list<std::shared_ptr<Bullet>> listBullet, int damage);
 	bool isActive;
 	int HP;
 private:
-	//std::list < std::shared_ptr<Bullet>> listBullet;
+	std::list < std::shared_ptr<Bullet>> listBullet;
 };
 

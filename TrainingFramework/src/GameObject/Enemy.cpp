@@ -32,6 +32,7 @@ void Enemy::Shoot(std::list<std::shared_ptr<Bullet>> listBullet, int damage) {
 			bullet->m_isActive = true;
 			auto newTexture = ResourceManagers::GetInstance()->GetTexture("enemy_bullet");
 			bullet->SetSize(10, 36);
+			bullet->m_isBossBonus = false;
 			if (isBoss) {
 				newTexture = ResourceManagers::GetInstance()->GetTexture("bossbullet");
 				bullet->SetSize(25, 50);
@@ -49,8 +50,19 @@ void Enemy::Shoot(std::list<std::shared_ptr<Bullet>> listBullet, int damage) {
 }
 
 //BossShoot
-void Enemy::BossShoot(std::list<std::shared_ptr<Bullet>> listBullet, int damage) {
-
+void Enemy::BossShoot(std::list<std::shared_ptr<Bullet>> listBullet, int damage,GLfloat deltaTime, int direct) {
+	Vector2 pos = Get2DPosition();
+	
+	for (auto bullet : listBullet) {
+		auto newTexture = ResourceManagers::GetInstance()->GetTexture("bossbullet");
+		//bullet->m_isBossBonus = true;
+		bullet->m_isActive = true;
+		bullet->SetTexture(newTexture);
+		bullet->SetSize(25, 50); 
+		GLfloat newPosX = pos.x + direct*deltaTime*ENEMY_BULLET_SPEED;
+		bullet->Set2DPosition(newPosX, newPosX);
+		break;
+	}
 }
 //Basic enemy
 void Enemy::Moving(GLfloat deltaTime) {
@@ -60,8 +72,8 @@ void Enemy::Moving(GLfloat deltaTime) {
 		Vector2 oldPosEnemy = Get2DPosition();
 		if (oldPosEnemy.y < -BULLET_SIZE || oldPosEnemy.y > screenHeight + BULLET_SIZE || oldPosEnemy.x < -BULLET_SIZE || oldPosEnemy.x > screenWidth + BULLET_SIZE) {
 
-			Set2DPosition(ENEMY_GATE_1);
-
+			Set2DPosition(0,0);
+			e_isActive = true;
 		}
 		else {
 			int newPosEnemyX = oldPosEnemy.x + direc * ENEMY_SPEED * deltaTime;
@@ -104,18 +116,22 @@ void Enemy::BossAttack(std::list<std::shared_ptr<Bullet>> listBullet, int damage
 			bullet->m_isPlayer = false;
 			bullet->m_isActive = true;
 			bullet->damage = damage;
-
+			//bullet->m_isBossBonus = false;
 			auto newTexture = ResourceManagers::GetInstance()->GetTexture("enemy_fast");
 			bullet->SetSize(25, 50);
 			
 			bullet->SetTexture(newTexture);
 			if (isLeftSide) {
-				bullet->Set2DPosition(pos.x - 120, pos.y - 120);
+				bullet->Set2DPosition(pos.x - 180, pos.y - 120);
 				printf("shot left\n");
 			}
 			else {
-				bullet->Set2DPosition(pos.x + 120, pos.y - 120);
+				bullet->Set2DPosition(pos.x + 180, pos.y - 120);
 				printf("shot right\n");
+			}
+			if (pos.y < -BULLET_SIZE || pos.y > screenHeight + BULLET_SIZE || pos.x < -BULLET_SIZE || pos.x > screenWidth + BULLET_SIZE) {
+				bullet->Set2DPosition(BASE_BULLET_POSITION);
+				bullet->m_isActive = false;
 			}
 			break;
 		}

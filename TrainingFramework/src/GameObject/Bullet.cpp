@@ -30,19 +30,19 @@ void Bullet::Update(GLfloat deltaTime)
 	}
 }
 
-//void Bullet::FastAttack(std::shared_ptr<Player> player, GLfloat deltaTime) {
-//	Vector2 pos = Get2DPosition();
-//	Vector2 pPos = player->Get2DPosition();
-//	GLfloat direct = abs((pPos.y - pos.y) / (pPos.x - pos.x));
-//
-//	GLfloat newPosX = pos.x + GetSpeed()*deltaTime;
-//	Set2DPosition(newPosX, direct * newPosX);
-//
-//	if (pos.y < -BULLET_SIZE || pos.y > screenHeight + BULLET_SIZE || pos.x < -BULLET_SIZE || pos.x > screenWidth + BULLET_SIZE) {
-//		Set2DPosition(BASE_BULLET_POSITION);
-//		m_isActive = false;
-//	}
-//}
+void Bullet::FastAttack(std::shared_ptr<Player> player, GLfloat deltaTime) {
+	Vector2 pos = Get2DPosition();
+	Vector2 pPos = player->Get2DPosition();
+	GLfloat direct = abs((pPos.y - pos.y) / (pPos.x - pos.x));
+
+	GLfloat newPosX = pos.x + GetSpeed()*deltaTime;
+	Set2DPosition(newPosX, direct * newPosX);
+
+	if (pos.y < -BULLET_SIZE || pos.y > screenHeight + BULLET_SIZE || pos.x < -BULLET_SIZE || pos.x > screenWidth + BULLET_SIZE) {
+		Set2DPosition(BASE_BULLET_POSITION);
+		m_isActive = false;
+	}
+}
 
 int Bullet::GetSpeed() {
 	if (m_isPlayer)

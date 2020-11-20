@@ -42,6 +42,9 @@ private:
 	std::shared_ptr<Player> m_Player;
 	std::shared_ptr<Enemy> Boss;
 	
+	std::shared_ptr<Enemy> enemy1;
+	std::shared_ptr<Enemy> enemy2;
+	std::shared_ptr<Enemy> enemy3;
 	std::shared_ptr<Enemy> m_Enemy;
 	std::shared_ptr<Bullet> m_FastEnemy;
 	std::shared_ptr<Bullet> m_Bullet;

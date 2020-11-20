@@ -16,7 +16,7 @@ public:
 	Vector2 makeRandom();
 
 	void Shoot(std::list<std::shared_ptr<Bullet>> listBullet, int damage);
-	void BossShoot(std::list<std::shared_ptr<Bullet>> listBullet, int damage);
+	void BossShoot(std::list<std::shared_ptr<Bullet>> listBullet, int damage, GLfloat deltaTime, int direct);
 	void Moving(GLfloat deltaTime);
 	void FastMoving(GLfloat deltaTime);
 	void Destroying(GLfloat deltaTime);
